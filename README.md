@@ -2,15 +2,15 @@
 
 Marketing site for **Smart Mileage Tracker** (App Store: [Smart Mileage: Tax Tracker](https://apps.apple.com/app/id6746294900)), the iOS app that detects drives automatically and logs mileage for IRS tax deductions.
 
-Plain static HTML + one CSS file. No build step, no JavaScript, no frameworks, no cookies, no analytics. Hosted on GitHub Pages with the custom domain `smartmileagetracker.com` (DNS at Porkbun; MX records for `support@` are on Zoho — never touch them).
+Plain static HTML + one CSS file. No build step, no JavaScript, no frameworks, no cookies, no analytics. Hosted on GitHub Pages with the custom domain `smartmileagetracker.com`. DNS and the `support@` mail records are managed outside this repo — never change the MX/TXT records.
 
 ## Pages
 
 | URL | File | Job |
 |---|---|---|
 | `/` | `index.html` | Landing page (App Store **Marketing URL**) |
-| `/support` | `support.html` | Contact + FAQ (App Store **Support URL** — must show real contact info) |
-| `/privacy` | `privacy.html` | Privacy policy (App Store **Privacy Policy URL**) |
+| `/support/` | `support/index.html` | Contact + FAQ (App Store **Support URL** — must show real contact info) |
+| `/privacy/` | `privacy/index.html` | Privacy policy (App Store **Privacy Policy URL**) |
 | — | `404.html` | Not-found page, picked up automatically by Pages |
 
 ## Local preview
@@ -19,7 +19,7 @@ Plain static HTML + one CSS file. No build step, no JavaScript, no frameworks, n
 python3 -m http.server 8080
 ```
 
-then open http://localhost:8080. Links are root-relative, so preview from the folder root (production is the domain root; the `*.github.io/<repo>/` path will look broken — that's expected and irrelevant).
+then open http://localhost:8080. Pages live in folders (`support/index.html`) so both `/support` and `/support/` resolve on GitHub Pages. Links are root-relative, so preview from the folder root (production is the domain root; the `*.github.io/<repo>/` path will look broken — that's expected and irrelevant).
 
 ## Regenerating images
 
@@ -54,7 +54,7 @@ python3 -c "from PIL import Image; Image.open('tools/.tmp/og-raw.png').convert('
 
 ## Annual maintenance (January, and July if the IRS moves mid-year)
 
-1. `grep -n "RATE-CHECK" *.html` — update every hit: the IRS cents-per-mile figure, the "$X a year you never claim" math (20 mi × 5 days × 52 weeks × rate), and the JSON-LD `aggregateRating` (refresh value/count from App Store Connect).
+1. `grep -rn "RATE-CHECK" --include=*.html .` — update every hit: the IRS cents-per-mile figure, the "$X a year you never claim" math (20 mi × 5 days × 52 weeks × rate), and the JSON-LD `aggregateRating` (refresh value/count from App Store Connect) **and the visible rating line next to the hero badge — the markup must match what the page shows**.
 2. Bump `<lastmod>` in `sitemap.xml` for changed pages.
 3. If policy or features changed, update `/privacy`'s "Last updated" date — and keep it consistent with the in-app policy text (`SettingsView.swift`, `PrivacyPolicyView`).
 4. Copy guardrails: never claim "no in-app purchases" (a one-time unlock is planned; "no subscription" is the durable promise), and screens show sample data at each year's own rates — keep captions rate-agnostic.
