@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Smart Mileage Tracker — Automatic Mileage Log for Taxes (iPhone)</title>
+<meta name="description" content="Free iPhone app that detects your drives and logs miles automatically for IRS tax deductions. No account, no subscription — your trips stay on your phone.">
+<link rel="canonical" href="https://smartmileagetracker.com/">
+<meta name="theme-color" content="#499EE9">
+<meta name="apple-itunes-app" content="app-id=6746294900">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Smart Mileage Tracker">
+<meta property="og:url" content="https://smartmileagetracker.com/">
+<meta property="og:title" content="Smart Mileage Tracker — Automatic Mileage Log for Taxes">
+<meta property="og:description" content="Drive. Park. The trip is already logged. Free iPhone app that records your drives automatically and prices every mile at the IRS rate.">
+<meta property="og:image" content="https://smartmileagetracker.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smart Mileage Tracker — Automatic Mileage Log for Taxes">
+<meta name="twitter:description" content="Drive. Park. The trip is already logged. Free on iPhone — no account, no subscription.">
+<meta name="twitter:image" content="https://smartmileagetracker.com/img/og.png">
+<link rel="stylesheet" href="/css/site.css?v=1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Smart Mileage Tracker",
+  "alternateName": "Smart Mileage: Tax Tracker",
+  "operatingSystem": "iOS",
+  "applicationCategory": "FinanceApplication",
+  "url": "https://smartmileagetracker.com/",
+  "installUrl": "https://apps.apple.com/app/id6746294900",
+  "sameAs": ["https://apps.apple.com/app/id6746294900"],
+  "image": "https://smartmileagetracker.com/img/og.png",
+  "description": "iPhone app that detects drives automatically and logs mileage for IRS tax deductions. No account, no subscription — trips stay on the device.",
+  "author": { "@type": "Organization", "name": "Smart Mileage Tracker" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "ratingCount": "18" }
+}
+</script>
+<!-- RATE-CHECK: aggregateRating above — refresh ratingValue/ratingCount from App Store Connect periodically -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I track mileage for taxes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The IRS lets you deduct qualifying miles at a standard rate it sets for each year, but the deduction has to survive on your records: the date, the distance, and the business purpose of each drive. Smart Mileage Tracker captures the date, route, distance, and addresses automatically for every drive, gives Business Purpose its own field, and exports it all as a CSV or PDF your accountant can use." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does automatic mileage tracking drain my battery?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Smart Mileage uses your location in the background so drives can be detected automatically, and background GPS does use some battery. Sampling adapts to your speed to keep the cost low, and you can restrict automatic tracking to when your iPhone is plugged in — useful if your car charges your phone anyway." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Smart Mileage Tracker really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — free on the App Store, with no account to create and no subscription. Tracking is unlimited: there is no cap on trips. If paid extras ever arrive, they will be a one-time purchase — never a subscription." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which drives are tax deductible?",
+      "acceptedAnswer": { "@type": "Answer", "text": "More than business alone: the IRS publishes standard mileage rates for business, medical, and charitable driving, and Smart Mileage prices all three — each at the rate for the year the trip happened. Regular commuting generally is not deductible. Deduction figures in the app are estimates, not tax advice; confirm your situation with a tax professional." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does my trip data go?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nowhere. Your trips live in a local database on your iPhone — there is no account and no server of ours for them to be uploaded to. Street-address lookups use Apple's Maps service; the log itself stays with you, and you can back it up to a JSON file you own." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/img/favicon-32.png" alt="" width="32" height="32">
+      Smart Mileage Tracker
+    </a>
+    <nav aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="/support">Support</a>
+      <a class="btn" href="https://apps.apple.com/app/id6746294900">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <img class="app-icon" src="/img/app-icon.png" alt="Smart Mileage Tracker app icon" width="92" height="92">
+        <h1>Drive. Park.<br>The trip is <span class="hl">already&nbsp;logged.</span></h1>
+        <p class="lede">Smart Mileage Tracker detects the drive, records it in the background, and prices every mile at the IRS rate. No button to press, no app to open, nothing to remember.</p>
+        <div class="store-cta">
+          <a class="badge" href="https://apps.apple.com/app/id6746294900">
+            <img src="/img/badge-app-store.svg" alt="Download on the App Store" width="168" height="56">
+          </a>
+          <p class="microline"><b>Free</b> · No account · No subscription</p>
+        </div>
+      </div>
+      <div class="f-shot">
+        <figure class="device">
+          <div class="screen-clip">
+            <img src="/img/screens/home.jpg" alt="Smart Mileage Tracker home screen showing this month's miles, the estimated deduction, and unclassified trips ready to swipe" width="640" height="1387" fetchpriority="high">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="How it works">
+    <div class="wrap">
+      <div class="step">
+        <div class="step-k">While driving</div>
+        <p>Nothing. <span>Trips start and stop on their own.</span></p>
+      </div>
+      <div class="step">
+        <div class="step-k">Once a week</div>
+        <p>Swipe. <span>Left for Business, right for Personal.</span></p>
+      </div>
+      <div class="step">
+        <div class="step-k">At tax time</div>
+        <p>Export. <span>A CSV, a PDF, or a full Year-End Tax Package.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="features">
+    <div class="wrap">
+      <div class="f-copy">
+        <span class="kicker">The money, on screen</span>
+        <h2>Every mile, priced at the IRS&nbsp;rate.</h2>
+        <!-- RATE-CHECK: 76 cents + $3,950 figure (20 mi x 5 days x 52 wk x $0.76) — update when the IRS rate changes -->
+        <p class="f-lede">Skip 20 business miles a day, five days a week, and at the current IRS business rate of 76 cents a mile that's about <span class="money-figure">$3,950 a year</span> you never claim. Smart Mileage makes the number impossible to miss:</p>
+        <ul class="bullets">
+          <li>Pick a purpose and the value appears: <b>"Estimated deduction: $8.92"</b></li>
+          <li>The Trips tab totals whatever you filter — count, distance, total deduction</li>
+          <li>A Home Screen widget keeps your year-to-date deduction in view</li>
+          <li>Business, Medical and Charity all earn a deduction, not business only</li>
+          <li>Rates are locked to the year of each trip, so changing this year's rate never rewrites last year's numbers</li>
+        </ul>
+        <p class="fineprint">Deduction figures are estimates based on IRS standard mileage rates and are not tax advice. Screens show sample data.</p>
+      </div>
+      <div class="f-shot">
+        <div class="device-pair">
+          <figure class="device sm">
+            <div class="screen-clip">
+              <img src="/img/screens/reports.jpg" alt="Reports screen with a year's mileage summary and tax deduction totals by category" width="640" height="1387" loading="lazy">
+            </div>
+          </figure>
+          <figure class="device sm">
+            <div class="screen-clip">
+              <img src="/img/screens/widget.jpg" alt="iPhone Home Screen widget showing a running year-to-date deduction total" width="640" height="1387" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature band rev">
+    <div class="wrap">
+      <div class="f-copy">
+        <span class="kicker">Automatic trip detection</span>
+        <h2>You drive. It&nbsp;logs.</h2>
+        <p class="f-lede">Detection is built to be trusted — validated starts, filtered noise, and a live view of every recording in progress.</p>
+        <ul class="bullets">
+          <li>A start is validated over a continuous window of speed and distance, not one GPS spike</li>
+          <li>With Motion &amp; Fitness access, walking is actively filtered out — a walk across the lot isn't filed as a drive</li>
+          <li>Start points are backdated and end times trimmed to where you actually parked, so the log matches the drive</li>
+          <li>Auto-stop is visible and cancelable: a countdown with a Cancel button, never a silent end</li>
+          <li>A Live Activity on the Lock Screen and Dynamic Island shows live distance and a running timer</li>
+          <li>And if your iPhone slept through a drive, optional <b>Missed Trip Recovery</b> rebuilds it afterward — clearly marked as an estimate and left for your review</li>
+        </ul>
+      </div>
+      <div class="f-shot">
+        <figure class="device">
+          <div class="screen-clip">
+            <img src="/img/screens/lockscreen.jpg" alt="iPhone Lock Screen with a Smart Mileage Live Activity showing a trip in progress with live distance" width="640" height="1387" loading="lazy">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="wrap">
+      <div class="f-copy">
+        <span class="kicker">Ten seconds a week</span>
+        <h2>Classify without unlocking.</h2>
+        <p class="f-lede">Every finished drive is one gesture away from filed.</p>
+        <ul class="bullets">
+          <li>Swipe a trip left for Business, right for Personal — long-press for Medical, Charity or Other</li>
+          <li>Select several at once and see what each choice is worth first: Business ≈ $28.35 · Medical ≈ $8.02 · Charity ≈ $5.48</li>
+          <li>Classify straight from the Trip Ended notification, without opening the app</li>
+          <li>Or let rules do it: saved places carry their own category, and work hours can file trips as Business</li>
+        </ul>
+        <p class="fineprint">Screens show sample data.</p>
+      </div>
+      <div class="f-shot">
+        <div class="device-pair">
+          <figure class="device sm">
+            <div class="screen-clip">
+              <img src="/img/screens/notification.jpg" alt="Lock Screen notification for a finished trip with Business and Personal buttons built in" width="640" height="1387" loading="lazy">
+            </div>
+          </figure>
+          <figure class="device sm">
+            <div class="screen-clip">
+              <img src="/img/screens/swipe.jpg" alt="Trip list with a card mid-swipe toward Business classification" width="640" height="1387" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature band rev">
+    <div class="wrap">
+      <div class="f-copy">
+        <span class="kicker">Built for filing day</span>
+        <h2>A record that holds&nbsp;up.</h2>
+        <p class="f-lede">The details a deduction has to survive on, captured on every drive — then packaged the way an accountant wants them.</p>
+        <ul class="bullets">
+          <li><b>Business Purpose</b> is a dedicated field — the substantiation line you actually get asked for — and it exports to CSV and PDF</li>
+          <li>Optional start and end odometer readings on any trip, alongside GPS distance</li>
+          <li>Export CSV or PDF for any range: all time, a year, recent months, or custom dates</li>
+          <li>The <b>Year-End Tax Package</b> builds three files at once: a per-trip CSV, a summary PDF, and a plain-text compliance summary</li>
+          <li>A pre-filing checklist names the gaps: unclassified trips, business trips missing a purpose, missing odometer readings</li>
+        </ul>
+      </div>
+      <div class="f-shot">
+        <figure class="device">
+          <div class="screen-clip">
+            <img src="/img/screens/yearend.jpg" alt="Year-End Tax Package screen with odometer reconciliation and a compliance checklist" width="640" height="1387" loading="lazy">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="wrap">
+      <div class="f-copy">
+        <span class="kicker">Privacy</span>
+        <h2>Yours alone.</h2>
+        <p class="f-lede">A mileage log is a map of your life. This one never leaves your hands.</p>
+        <ul class="bullets">
+          <li>No account, no sign-in, no subscription, no cap on trips</li>
+          <li>Your trips live in a local database on your iPhone — never uploaded to our servers, <b>because there are none</b></li>
+          <li>Street-address lookups use Apple's Maps service; the log itself stays with you</li>
+          <li>Back up every trip to a JSON file you own, and restore it from the file picker</li>
+          <li>Miles or kilometers across the app, with mph or km/h for speed</li>
+        </ul>
+        <p class="fineprint">This website keeps the same promise: no cookies, no analytics, no trackers. <a href="/privacy">Read the privacy policy</a>.</p>
+      </div>
+      <div class="f-shot">
+        <figure class="device">
+          <div class="screen-clip">
+            <img src="/img/screens/privacy.jpg" alt="Privacy and permissions settings showing all data stored on device" width="640" height="1387" loading="lazy">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Mileage tracking for taxes, answered.</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How do I track mileage for taxes?</summary>
+          <div class="a">
+            <p>The IRS lets you deduct qualifying miles at a standard rate it sets for each year — but the deduction has to survive on your records: the date, the distance, and the business purpose of each drive. Smart Mileage Tracker captures the date, route, distance, and addresses automatically for every drive, gives Business Purpose its own field, and exports it all as a CSV or PDF your accountant can use.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does automatic mileage tracking drain my battery?</summary>
+          <div class="a">
+            <p>Smart Mileage uses your location in the background so drives can be detected automatically, and background GPS does use some battery. Sampling adapts to your speed to keep the cost low, and you can restrict automatic tracking to when your iPhone is plugged in — useful if your car charges your phone anyway.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is Smart Mileage Tracker really free?</summary>
+          <div class="a">
+            <p>Yes — free on the App Store, with no account to create and no subscription. Tracking is unlimited: there is no cap on trips. If paid extras ever arrive, they will be a one-time purchase — never a subscription.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Which drives are tax deductible?</summary>
+          <div class="a">
+            <p>More than business alone: the IRS publishes standard mileage rates for business, medical, and charitable driving, and Smart Mileage prices all three — each at the rate for the year the trip happened. Regular commuting generally is not deductible.</p>
+            <p>Deduction figures in the app are estimates, not tax advice; confirm your situation with a tax professional.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Where does my trip data go?</summary>
+          <div class="a">
+            <p>Nowhere. Your trips live in a local database on your iPhone — there is no account and no server of ours for them to be uploaded to. Street-address lookups use Apple's Maps service; the log itself stays with you, and you can back it up to a JSON file you own. <a href="/privacy">Privacy policy</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Every mile you forget is money you hand&nbsp;back.</h2>
+      <p>Put the log on autopilot today.</p>
+      <div class="store-cta">
+        <a class="badge" href="https://apps.apple.com/app/id6746294900">
+          <img src="/img/badge-app-store.svg" alt="Download on the App Store" width="168" height="56">
+        </a>
+        <p class="microline"><b>Free</b> · No account · No subscription</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <span>© 2026 Smart Mileage Tracker</span>
+      <nav aria-label="Footer">
+        <a href="https://apps.apple.com/app/id6746294900">App Store</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:support@smartmileagetracker.com">support@smartmileagetracker.com</a>
+      </nav>
+    </div>
+    <p class="foot-legal">Deduction figures are estimates based on IRS standard mileage rates and are not tax advice. Confirm your numbers with a tax professional before filing. Apple, the Apple logo, and iPhone are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

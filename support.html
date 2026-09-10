@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Support &amp; FAQ — Smart Mileage Tracker</title>
+<meta name="description" content="Help for Smart Mileage Tracker: automatic tracking setup, missed trips, battery use, tax exports, backup and restore. Contact: support@smartmileagetracker.com.">
+<link rel="canonical" href="https://smartmileagetracker.com/support">
+<meta name="theme-color" content="#499EE9">
+<meta name="apple-itunes-app" content="app-id=6746294900">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Smart Mileage Tracker">
+<meta property="og:url" content="https://smartmileagetracker.com/support">
+<meta property="og:title" content="Support &amp; FAQ — Smart Mileage Tracker">
+<meta property="og:description" content="Setup help, missed-trip troubleshooting, exports, backups, and how to reach a human.">
+<meta property="og:image" content="https://smartmileagetracker.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/css/site.css?v=1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I set up automatic trip detection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automatic detection needs three permissions: Location set to \"Always\" (so drives can be detected with the app closed), Motion & Fitness (so walking is filtered out), and Notifications (so you hear when a trip ends). The Home tab shows a setup health card whenever something is degraded — location left on \"While Using\", motion access off, or Low Power Mode — with a one-tap Open Settings. You can replay the full setup guide any time from Settings." }
+    },
+    {
+      "@type": "Question",
+      "name": "A drive wasn't recorded. What happened?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually iOS put the app to sleep, or a permission changed. First check Settings > App Data > Auto-Discarded Trips — recordings judged to be GPS noise are kept there with the evidence used, and one tap restores them. Second, turn on Missed Trip Recovery in Settings: if your iPhone slept through a drive, the trip can be rebuilt afterward from where you left and arrived, clearly marked as an estimate for your review. If drives are still missing, export Settings > App Data > Debug Logs and email them to support — the log shows exactly what detection saw." }
+    },
+    {
+      "@type": "Question",
+      "name": "A walk or a shuttle ride got logged as a drive.",
+      "acceptedAnswer": { "@type": "Answer", "text": "With Motion & Fitness access granted, walking is actively filtered out of trip starts, so make sure that permission is on. Recordings the app rejects as noise live in Settings > App Data > Auto-Discarded Trips rather than your log. A wrongly kept trip can be deleted or reclassified from the trip list with a swipe." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much battery does it use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Background GPS uses some battery; the app keeps the cost low by adapting its sampling to your speed. If you want the minimum footprint, Settings can restrict automatic tracking to when the phone is plugged in — most drivers charge in the car anyway. Note that Low Power Mode limits background activity and can delay detection; the Home tab health card will flag it." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I export my mileage for taxes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "From Reports, export a CSV or PDF for any range: all time, a year, recent months, or custom dates. The Year-End Tax Package builds three files at once — a per-trip CSV, a summary PDF, and a plain-text compliance summary an accountant can open anywhere — and a pre-filing checklist names any gaps first: unclassified trips, business trips missing a purpose, missing odometer readings." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I back up or move my data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Settings > App Data > Backup writes every trip to a JSON file you own; restore it later from the file picker on the same or a new iPhone. The app also keeps a daily automatic backup on your device, visible in the Files app. Nothing is uploaded anywhere — backups are files in your hands." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change the IRS rate the app uses?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rates are locked to the year of each trip so history never silently changes, and every year's rate is editable in Settings. Recent IRS rates are built in, including mid-year changes, and each trip is priced at the rate for its own date." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/img/favicon-32.png" alt="" width="32" height="32">
+      Smart Mileage Tracker
+    </a>
+    <nav aria-label="Site">
+      <a href="/#features">Features</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/support">Support</a>
+      <a class="btn" href="https://apps.apple.com/app/id6746294900">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap">
+    <h1>Support</h1>
+    <p class="intro">Real answers from the person who builds the app.</p>
+
+    <div class="callout">
+      <p class="big">📮 <a href="mailto:support@smartmileagetracker.com">support@smartmileagetracker.com</a></p>
+      <p>The fastest route is in the app itself: <b>Settings → Contact Support</b> pre-fills an email and can attach diagnostics, so we can actually see what happened. Either way, a human reads every message.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How do I set up automatic trip detection?</summary>
+        <div class="a">
+          <p>Automatic detection needs three permissions: <b>Location</b> set to "Always" (so drives can be detected with the app closed), <b>Motion &amp; Fitness</b> (so walking is filtered out), and <b>Notifications</b> (so you hear when a trip ends).</p>
+          <p>The Home tab shows a setup health card whenever something is degraded — location left on "While Using", motion access off, or Low Power Mode — with a one-tap Open Settings. You can replay the full setup guide any time from Settings.</p>
+        </div>
+      </details>
+      <details>
+        <summary>A drive wasn't recorded. What happened?</summary>
+        <div class="a">
+          <p>Usually iOS put the app to sleep, or a permission changed. Two places to look first:</p>
+          <p><b>Settings → App Data → Auto-Discarded Trips.</b> Recordings judged to be GPS noise are kept there with the evidence used — nothing is silently deleted — and one tap restores them.</p>
+          <p><b>Settings → Missed Trip Recovery.</b> Turn it on and, if your iPhone slept through a drive, the trip can be rebuilt afterward from where you left and arrived — clearly marked as an estimate and left for your review.</p>
+          <p>If drives are still going missing, export <b>Settings → App Data → Debug Logs</b> and email them over — the log shows exactly what detection saw.</p>
+        </div>
+      </details>
+      <details>
+        <summary>A walk or a shuttle ride got logged as a drive.</summary>
+        <div class="a">
+          <p>With Motion &amp; Fitness access granted, walking is actively filtered out of trip starts — so first make sure that permission is on. Recordings the app rejects as noise live in Settings → App Data → Auto-Discarded Trips rather than your log. A wrongly kept trip can be deleted or reclassified from the trip list with a swipe.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How much battery does it use?</summary>
+        <div class="a">
+          <p>Background GPS uses some battery; the app keeps the cost low by adapting its sampling to your speed. If you want the minimum footprint, Settings can restrict automatic tracking to when the phone is plugged in — most drivers charge in the car anyway.</p>
+          <p>Note that Low Power Mode limits background activity and can delay detection; the Home tab health card will flag it.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I export my mileage for taxes?</summary>
+        <div class="a">
+          <p>From Reports, export a CSV or PDF for any range: all time, a year, recent months, or custom dates. The <b>Year-End Tax Package</b> builds three files at once — a per-trip CSV, a summary PDF, and a plain-text compliance summary an accountant can open anywhere — and a pre-filing checklist names any gaps first: unclassified trips, business trips missing a purpose, missing odometer readings.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I back up or move my data?</summary>
+        <div class="a">
+          <p><b>Settings → App Data → Backup</b> writes every trip to a JSON file you own; restore it later from the file picker on the same or a new iPhone. The app also keeps a daily automatic backup on your device, visible in the Files app. Nothing is uploaded anywhere — backups are files in your hands.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I change the IRS rate the app uses?</summary>
+        <div class="a">
+          <p>Yes. Rates are locked to the year of each trip so history never silently changes, and every year's rate is editable in Settings. Recent IRS rates are built in, including mid-year changes, and each trip is priced at the rate for its own date.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="callout page-cta">
+      <p class="big">Enjoying the app?</p>
+      <p>A short review genuinely helps an independent app get found. <a href="https://apps.apple.com/app/id6746294900?action=write-review">Leave a review on the App Store</a> — and if something's <em>not</em> working, email first so it can be fixed.</p>
+    </div>
+
+    <p style="margin-top:32px"><a href="/">← Back to smartmileagetracker.com</a> · <a href="/privacy">Privacy Policy</a> · <a href="https://apps.apple.com/app/id6746294900">Smart Mileage Tracker on the App Store</a></p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <span>© 2026 Smart Mileage Tracker</span>
+      <nav aria-label="Footer">
+        <a href="https://apps.apple.com/app/id6746294900">App Store</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:support@smartmileagetracker.com">support@smartmileagetracker.com</a>
+      </nav>
+    </div>
+    <p class="foot-legal">Deduction figures are estimates based on IRS standard mileage rates and are not tax advice. Confirm your numbers with a tax professional before filing.</p>
+  </div>
+</footer>
+
+</body>
+</html>

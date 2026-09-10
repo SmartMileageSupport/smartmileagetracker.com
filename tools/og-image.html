@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+  html, body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:radial-gradient(120% 130% at 50% -10%, #F4FAFF 0%, #E4F1FC 52%, #CFE6F8 100%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .arc { position:absolute; inset:0; opacity:.5; pointer-events:none; }
+  .card { position:relative; display:flex; align-items:center; gap:64px; padding:0 96px; }
+  .icon {
+    width:220px; height:220px; border-radius:50px; flex:none;
+    box-shadow:0 24px 60px rgba(18,58,99,.28), 0 4px 16px rgba(18,58,99,.14);
+  }
+  .eyebrow {
+    display:inline-block; font-size:22px; font-weight:700; letter-spacing:2.6px;
+    text-transform:uppercase; color:#1C74C4; background:rgba(28,116,196,.11);
+    padding:9px 20px; border-radius:999px; margin-bottom:22px;
+  }
+  h1 { font-size:64px; line-height:1.06; font-weight:800; letter-spacing:-2px; color:#1d1d1f; }
+  h1 .accent { color:#1C74C4; }
+  p { font-size:28px; font-weight:450; color:#4C6076; margin-top:20px; letter-spacing:-.3px; }
+</style>
+</head>
+<body>
+  <svg class="arc" viewBox="0 0 1200 630" preserveAspectRatio="none">
+    <path d="M-80 700 C 240 480, 300 290, 640 170 C 860 92, 1060 120, 1300 10"
+          fill="none" stroke="#fff" stroke-width="90" stroke-linecap="round"/>
+  </svg>
+  <div class="card">
+    <img class="icon" src="../img/app-icon.png" alt="">
+    <div>
+      <div class="eyebrow">Automatic mileage log</div>
+      <h1>Drive. Park.<br>The trip is <span class="accent">already&nbsp;logged.</span></h1>
+      <p>Free on iPhone &mdash; no account, no subscription.</p>
+    </div>
+  </div>
+</body>
+</html>
