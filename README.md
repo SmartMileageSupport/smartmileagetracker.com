@@ -1,6 +1,6 @@
 # smartmileagetracker.com
 
-Marketing site for **Smart Mileage Tracker** (App Store: [Smart Mileage: Tax Tracker](https://apps.apple.com/app/id6746294900)), the iOS app that detects drives automatically and logs mileage for IRS tax deductions.
+Marketing site for **Smart Mileage Tracker** (App Store: [Smart Mileage Tracker](https://apps.apple.com/app/id6746294900)), the iOS app that detects drives automatically and logs mileage for IRS tax deductions.
 
 Plain static HTML + one CSS file. No build step, no JavaScript, no frameworks, no cookies, no analytics. Hosted on GitHub Pages with the custom domain `smartmileagetracker.com`. DNS and the `support@` mail records are managed outside this repo — never change the MX/TXT records.
 
@@ -54,10 +54,10 @@ python3 -c "from PIL import Image; Image.open('tools/.tmp/og-raw.png').convert('
 
 ## Annual maintenance (January, and July if the IRS moves mid-year)
 
-1. `grep -rn "RATE-CHECK" --include=*.html .` — update every hit: the IRS cents-per-mile figure, the "$X a year you never claim" math (20 mi × 5 days × 52 weeks × rate), and the JSON-LD `aggregateRating` (refresh value/count from App Store Connect) **and the visible rating line next to the hero badge — the markup must match what the page shows**.
-2. Bump `<lastmod>` in `sitemap.xml` for changed pages.
-3. If policy or features changed, update `/privacy`'s "Last updated" date — and keep it consistent with the in-app policy text (`SettingsView.swift`, `PrivacyPolicyView`).
-4. Copy guardrails: never claim "no in-app purchases" (a one-time unlock is planned; "no subscription" is the durable promise), and screens show sample data at each year's own rates — keep captions rate-agnostic.
+1. Facts on the pages carry RATE-CHECK and FACT-CHECK comments with a source and a checked date. Re-check each one against its source before changing it.
+2. A page's visible Updated date, its JSON-LD dateModified and its sitemap lastmod always change together.
+3. The privacy page text is fixed; change it only by replacing the whole main block with newly approved text.
+4. Durable claims only: no account, no subscription, automatic tracking is unlimited. Screens show sample data; keep captions rate-agnostic.
 5. Identity guardrails: the owner's personal name and email stay OFF this site and out of this repo's git history — copyright reads "© 2026 Smart Mileage Tracker", JSON-LD author is the Organization, and commits use the SmartMileageSupport noreply identity (set in this repo's local git config).
 
 ## Design notes
